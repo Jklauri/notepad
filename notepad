@@ -160,3 +160,5 @@ ip dhcp pool REMOTEVPN
  ip address dhcp
  no shut
  do bp
+
+ebbinghaus forgetting curve
