@@ -161,3 +161,73 @@ ip dhcp pool PSBANK.COM.PH
  do bp
 
 ebbinghaus forgetting curve
+
+!@IPV6
+
+CSI
+98 = 7b
+128- 7 = 121 (8th hextet, 3rd hexadecimal, 8i)
+2001:0db8:00a0::0080:/121
+1st: 2001:0db8:00a0::0081:/121
+Last: 2001:0db8:00a0::00Ff:/121
+Not Network: 2001:0db8:00a0::0100:/121
+
+@i4
+conf t
+ipv6 unicast-routing
+int e0/0
+no shut
+ipv6 add 2001:db8:a0::81/121
+
+@r4
+conf t
+ipv6 unicast-routing
+int e0/0
+no shut
+ipv6 add 2001:db8:a0::ff/121
+
+CAI method 
+16 sites
+C: 16 = 4 bits
+A: /56 + 4 bits = /60 (4th hex, 3rd hexa, 1i)
+I:2001:0db8:0000:0000:0000:0000:0000:0000/60
+1st             :0000:
+2nd             :0010:
+3rd             :0020: or 2001:db8:0:20::/60
+4th             :0030:
+
+1st valid: 2001:db8:0:20::1/60
+Last Non-Anycast:
+First Anycast (last 128 IPs): 2001:db8:0:2F:FFFF:FFFF:FFFF:FF80
+Last valid:2001:db8:0:2F:FFFF:FFFF:FFFF:FFFF/60
+Not:
+Not: 2001:db8:0:30::/60
+
+3 ways to ipv6 add ip
+
+manual
+GUA EUI ipv6 gua using a unique 64-bit interface identifier
+DHCPv6 - ipv6 add dhcp
+SLAA
+ip add autoconfig
+
+@i2
+conf t
+ipv6 unicast-routing
+int e0/0
+ ipv6 add 2001:db8:0:40::/60 eui-64
+ no shut
+ end
+@r1
+conf t
+ipv6 unicast-routing
+int e0/0
+ ipv6 add 2001:db10:0::/64 eui-64 or add autoconfig (automatic ipv6 routing)
+ no shut
+ end
+
+*assigment for day3
+
+design an ipv6 network for 780 users using the available ipv6 address space of 2001:db8:b:efe:1::/64
+
+subnet for 78 sites using 2001:db8:2:5::/98 determine the third subnet c: 78 = 7 bits
