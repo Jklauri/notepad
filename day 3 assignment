@@ -1,0 +1,57 @@
+1st ass
+
+Design an IPv6 Network for 780 users using the available IPv6 address space
+
+2001:db8:b:efe:1::/64
+
+C: 780 users = 10 bits
+S: 128 - 10 = /118
+
+/118 = 8th, 2nd, 4i
+
+2001:0db8:000b:0efe:0001:0000:0000:0000/118
+
+I: Ipasok si 4i sa 8th hex, 2nd hexadecimal
+
+2001:0db8:000b:0efe:0001:0000:0400/118
+
+NETWORK: 2001:0db8:000b:0efe:0001:0000:0000:0400/118
+FIRST:   2001:0db8:000b:0efe:0001:0000:0000:0401/118
+LAST:    2001:0db8:000b:0efe:0001:0000:0000:07FF/118
+NOT:     2001:0db8:000b:0efe:0001:0000:0000:0800/118
+
+
+
+
+
+2nd ass
+
+Design an IPv6 Network for 78 sites using the IPv6 address space
+2001:db8:2:5::/98
+
+Determine the 3rd Site
+
+C: 78 sites = 7 bits
+A: /98 + 7 = /105
+
+/105 = 7th, 3rd, 8i
+
+2001:0db8:0002:0005:0000:0000:0000:0000/105
+
+I: Ipasok si 8i sa 7th hex, 3rd hexadecimal
+
+2001:0db8:0002:0005:0000:0000:0080:0000/105
+
+1st Site: 2001:0db8:0002:0005:0000:0000:0000:0000/105
+2nd Site: 2001:0db8:0002:0005:0000:0000:0010:0000/105
+3rd Site: 2001:0db8:0002:0005:0000:0000:0020:0000/105
+4th Site: 2001:0db8:0002:0005:0000:0000:0030:0000/105
+
+3RD SITE:
+
+2001:0db8:0002:0005:0000:0000:0020:0000/105
+
+NETWORK: 2001:0db8:0002:0005:0000:0000:0020:0000/105
+FIRST:   2001:0db8:0002:0005:0000:0000:0020:0001/105
+LAST:    2001:0db8:0002:0005:0000:0000:002F:FFFF/105
+NOT:     2001:0db8:0002:0005:0000:0000:0030:0000/105
