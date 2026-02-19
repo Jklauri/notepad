@@ -1,0 +1,48 @@
+layer 1
+
+1 poe, 802.3af, 802.3at, 802.3bt
+svi  mac add
+dhcp , ip address
+tgtp, sccp, sip
+rtp
+codes, g711, g729
+application, ip phone, rtp player
+
+electric (utp)
+laser (fiber)
+rf (wireless)
+
+!@ configure SSH
+  
+conf t 
+ip domain name ccna.com
+crypto key generate rsa modulus 2048 label key
+ip ssh rsa keypair-name key
+ip ssh version 2
+!
+  line vty 0 14
+login local
+exit
+username admin priv 15 secret pass
+end
+
+utm-ph
+  net adapters : nat
+net adapters = vmnet 2
+net adapters = vmnet 3
+  net adapters = briidge
+
+  utm-jp
+   net adapters : nat
+net adapters = vmnet 2
+net adapters = vmnet 4
+
+  net ops ph
+  vmnet 1
+vmnet 2
+  vmnet 3
+  bridged
+
+  
+bldg.jp
+ vmnet 4
