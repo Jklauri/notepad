@@ -165,3 +165,9 @@ no ip nat inside source static tcp  10.62.1.4  80  208.8.8.100  2000
 conf t
  ip nat inside source static tcp  10.62.100.8  23  200.0.0.62  2025
 ip nat inside source static tcp  10.62.1.6  23  200.0.0.62 2022
+
+conf t 
+ip ssh server algorithm authentication publickey
+no ip ssh server algorithm authentication password
+no ip ssh server algorithm authentication keyboard
+end
