@@ -6,12 +6,10 @@ Design an IPv6 Network for 780 users using the available IPv6 address space
 
 C: 780 users = 10 bits
 S: 128 - 10 = /118
-
-/118 = 8th, 2nd, 4i
+I: Ipasok si 4i sa 8th hex, 2nd hexadecimal
+/118 = (8th, 2nd, 4i)
 
 2001:0db8:000b:0efe:0001:0000:0000:0000/118
-
-I: Ipasok si 4i sa 8th hex, 2nd hexadecimal
 
 2001:0db8:000b:0efe:0001:0000:0400/118
 
@@ -33,12 +31,12 @@ Determine the 3rd Site
 
 C: 78 sites = 7 bits
 A: /98 + 7 = /105
+I: Ipasok si 8i sa 7th hex, 3rd hexadecimal
 
-/105 = 7th, 3rd, 8i
+
+/105 = (7th, 3rd, 8i)
 
 2001:0db8:0002:0005:0000:0000:0000:0000/105
-
-I: Ipasok si 8i sa 7th hex, 3rd hexadecimal
 
 2001:0db8:0002:0005:0000:0000:0080:0000/105
 
