@@ -1,0 +1,40 @@
+trunking - access to trunk port 
+
+Sted 
+  smt
+  stav
+  stnv
+
+  lan traffic
+
+  sh spanning-tree vlan mst conf
+
+  switching (4 super heroes)
+
+  802.1q - trunking
+  802.1d - stp
+  802.1w - rapid
+  802.1s  - mistp
+
+  hrsp, vrrp, glbp
+    LACP
+
+    how to be a network engineer in 2026:
+
+    step1: youVERSION2 1 resume = 1 company
+      use chatgpt to modify resumes as per JD
+      step 2: big risk, big reward
+        bill gates: windows pc, wala pa
+          elon musks: working rockets, wala pa
+            you: ccna pasado
+              cash : 320 usd
+
+                exam 100 questions
+                6 lab
+                94 multiple choice
+
+                total 1500
+
+                pearsonvue.com
+
+                
